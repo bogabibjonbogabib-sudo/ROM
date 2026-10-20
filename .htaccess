@@ -1,0 +1,9 @@
+Options -Indexes
+DirectoryIndex index.php index.html
+
+RewriteEngine On
+RewriteRule ^admin/?$ index.php [L]
+
+<FilesMatch "^(config\.php|schema\.sql|README_DEPLOY\.md|index\.html)$">
+    Require all denied
+</FilesMatch>
